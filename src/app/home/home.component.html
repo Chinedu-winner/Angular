@@ -1,0 +1,19 @@
+<h1> Hello people {{num1 + num2}}</h1>
+<!-- angular basic
+  conditional statement 
+<div *ngIf="isSeeFood">Today is a great day</div>
+<div *ngIf="!isSeeFood">Today is a great day</div> -->
+
+<div>
+    <label for="">Username</label><br>
+    <input type="text" [(ngModel)]="userName" placeholder={{isSeeFood}} name="userName"> <br>
+    <label for="">Age</label><br>
+    <input type="number" [(ngModel)]="age" placeholder={{isSeeFood}} name="age"> <br>
+    <button  (click)="myFunction()">Click me</button>
+
+    <div *ngFor="let student of studentArray">
+        <div>{{student.userName}}</div>
+        <div>{{student.age}}</div>
+    </div>
+  </div>
+  
