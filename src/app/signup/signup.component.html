@@ -7,7 +7,7 @@
 
         <div *ngIf="userForm.get('full_name')?.invalid && userForm.get('full_name')?.touched">
             <span class="text-danger text-sm"*ngIf="userForm.get('full_name')?.errors?.['required']">Full name is required</span>
-            <span class="text-danger text-sm"*ngIf="userForm.get('full_name')?.errors?.['minlength']">Full name must not be less than 5 characterd</span>
+            <span class="text-danger text-sm"*ngIf="userForm.get('full_name')?.errors?.['minlength']">Full name must not be less than 5 characters</span>
         </div>
     </div>
 
@@ -26,7 +26,7 @@
         <input type="password" placeholder="password" class="form-control"formControlName="password">
     </div>
     <div class="form-group mb-2">
-        <button class="btn btn-md bg-dark text-light px-2" type="submit" (click) = "register()">Register</button>
+        <button class="btn btn-md bg-dark text-light px-2" type="submit" [disabled]="userForm.invalid">Register</button>
     </div>
 </form>
 </div>

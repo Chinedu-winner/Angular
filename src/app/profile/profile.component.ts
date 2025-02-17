@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-profile',
@@ -7,5 +8,16 @@ import { Component } from '@angular/core';
   styleUrl: './profile.component.css'
 })
 export class ProfileComponent {
+constructor (
+  private _activate: ActivatedRoute
+){}
+
+username: any  = "";
+
+ngOnInit(): void{
+  this._activate.params.subscribe(()=>{
+    // this.username = param;
+  })
+}
 
 }

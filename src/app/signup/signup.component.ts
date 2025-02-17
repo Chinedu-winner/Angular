@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, inject} from '@angular/core';
 import { FormsModule,FormBuilder, Validators, FormGroup, ReactiveFormsModule, } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-signup',
@@ -12,11 +13,10 @@ import { FormsModule,FormBuilder, Validators, FormGroup, ReactiveFormsModule, } 
 export class SignupComponent {
     // userForm :FormGroup //creting a new instance of the FormGroup class 
 
-    private  fb = inject(FormBuilder)
-  // constructor(
-  //   // private _fb: FormBuilder,
-  //   // private _formGroup: FormGroup
-  // ) {}
+    private  fb = inject(FormBuilder); 
+  constructor(
+    private _router : Router
+  ) {}
   userForm = this.fb.group({ //Equating the formBuilder group to the userForm group
     'full_name': ['', [Validators.required, Validators.minLength(5)]],
     'email' : ['', [Validators.required, Validators.email]], 
@@ -38,9 +38,9 @@ users:any = []
 
   register(){
       if (this.userForm.invalid){
-        console.log('form is invalid');       
+        console.log(this.userForm.get('full_name')?.errors);       
       }else{
-        console.log('valid form');       
+        this._router.navigate(['/login'])      
       }
       // const user = {full_name: this.full_name, email: this.email, phone_number: this.phone_number, password: this.password}
       // this.users.push(user)

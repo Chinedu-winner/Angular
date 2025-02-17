@@ -14,7 +14,7 @@ export const routes: Routes = [
     {path: 'home', redirectTo:'', pathMatch:'full'},
     {path: 'user', children:[
         {path:'', component: UsersComponent}, 
-        {path:'profile', component: ProfileComponent}
+        {path:'profile/:name', component: ProfileComponent}
     ]},
     {path: '**', component: PageNotFoundComponent, title: '404 | Page not found'}
 ];
