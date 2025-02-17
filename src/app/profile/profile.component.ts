@@ -16,7 +16,7 @@ username: any  = "";
 
 ngOnInit(): void{
   this._activate.params.subscribe((param)=>{
-    this.username = param['name'];
+    this.username = param['name'].replaceAll('-', ' ');
   })
 }
 

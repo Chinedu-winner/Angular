@@ -40,7 +40,10 @@ users:any = []
       if (this.userForm.invalid){
         console.log(this.userForm.get('full_name')?.errors);       
       }else{
-        this._router.navigate(['/login'])      
+        const name = this.userForm.get('full_name')?.value?.replaceAll (' ', '-');
+        console.log(name);
+        
+        this._router.navigate(['/user/profile', name])      
       }
       // const user = {full_name: this.full_name, email: this.email, phone_number: this.phone_number, password: this.password}
       // this.users.push(user)
