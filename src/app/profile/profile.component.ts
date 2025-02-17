@@ -15,8 +15,8 @@ constructor (
 username: any  = "";
 
 ngOnInit(): void{
-  this._activate.params.subscribe(()=>{
-    // this.username = param;
+  this._activate.params.subscribe((param)=>{
+    this.username = param['name'];
   })
 }
 
