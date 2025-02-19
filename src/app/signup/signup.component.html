@@ -4,7 +4,6 @@
     <div class="form-group mb-2">
         <label for="">Full name</label>
         <input type="text" class="form-control" placeholder="Your Name" formControlName="full_name">
-
         <div *ngIf="userForm.get('full_name')?.invalid && userForm.get('full_name')?.touched">
             <span class="text-danger text-sm"*ngIf="userForm.get('full_name')?.errors?.['required']">Full name is required</span>
             <span class="text-danger text-sm"*ngIf="userForm.get('full_name')?.errors?.['minlength']">Full name must not be less than 5 characters</span>

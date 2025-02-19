@@ -1,1 +1,7 @@
 <p>Welcome {{username}}</p>
+
+<button class="btn bg-dark text-light" (click)="changeName('Winner')">Change name</button>
+
+<div *ngFor="let user of users; let i = index">
+    <p>{{i+1}}. {{user}}</p>
+</div>
