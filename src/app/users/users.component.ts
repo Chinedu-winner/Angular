@@ -14,9 +14,25 @@ export class UsersComponent {
     private _auth: AuthService
   ){}
 
-  user:Array<String> = []
+  user:any = []
 
   ngOnInit() : void  {
-    this.user = this._auth.users
+    this._auth.fetchUsers().subscribe({
+      next: (res)=>{
+        this.user = res;       
+      }, 
+      error : (err)=>{
+        console.log(err);       
+      }
+    });
+    // this._auth.fetchViews().subscribe({
+    //   next: (res)=>{
+    //     this.user = res;
+    //   },
+    //   error : (err)=>{
+    //     console.log(err);
+    //   }
+    // })
   }
+  
 }

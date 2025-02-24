@@ -11,7 +11,7 @@ import { FormsModule } from '@angular/forms';
 })
 export class HomeComponent {
   title = 'angular-intro';
-  num1 = 40;
+  num1 = 30;
   num2 = 22; 
 
   isSeeFood = true;

@@ -9,7 +9,7 @@
     <input type="text" [(ngModel)]="userName" placeholder={{isSeeFood}} name="userName"> <br>
     <label for="">Age</label><br>
     <input type="number" [(ngModel)]="age" placeholder={{isSeeFood}} name="age"> <br>
-    <button  (click)="myFunction()">Click me</button>
+    <button class="bg-danger" (click)="myFunction()">Click me</button>
 
     <div *ngFor="let student of studentArray">
         <div>{{student.userName}}</div>

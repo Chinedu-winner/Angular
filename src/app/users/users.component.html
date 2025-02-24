@@ -1,5 +1,20 @@
 <p>users work</p>
-
-<div *ngFor="let user of user; let i = index">
-    <p>{{i+1}}. {{user}}</p>
+<div class="row d-flex">
+    <div *ngFor="let user of user; let i = index">
+        <div class="card col-md-3 px-2 py-1 ">
+            <p class="fw-bold">{{user.name}}</p>
+            <p>{{user.email}}</p>
+            <a href="" class="text-decoration-none">{{user.website}}</a>
+        </div>
+    </div>
 </div>
+
+<!-- <div>
+    <div *ngFor="let user of user; let i = index">
+        <div>
+            <p>{{i+1}}</p>
+            <p>{{user.name}}</p>
+            <p>{{user.post}}</p>
+        </div>
+    </div>
+</div> -->
