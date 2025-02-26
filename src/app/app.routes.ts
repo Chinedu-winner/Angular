@@ -17,6 +17,6 @@ export const routes: Routes = [
         {path:'', component: UsersComponent, title: 'user'}, 
         {path:'profile/:name', component: ProfileComponent, title: 'profile'}
     ]},
-    {path: 'material', component:MaterialComponent, title: 'Angular Material'}, 
+    {path: 'material', component:MaterialComponent, title: 'Material'}, 
     {path: '**', component: PageNotFoundComponent, title: '404 | Page not found'}
 ];
