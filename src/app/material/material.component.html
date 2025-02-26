@@ -3,7 +3,7 @@
     <p>Buttons</p>
     <button mat-button>Click me</button>
     <button mat-raised-button>Click me</button>
-    <button mat-stroked-button>Click me</button>
+    <button mat-stroked-button>Search me</button>
     <button mat-icon-button>
         <mat-icon>settings</mat-icon>
     </button>
@@ -17,11 +17,9 @@
         </mat-card-header>
         <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
         <mat-card-content>
-        <p>
-            The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+        <p>The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
             A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-            bred for hunting.
-        </p>
+            bred for hunting.</p>
         </mat-card-content>
         <mat-card-actions>
         <button mat-button class="bg-dark text-light me-2 px-2">LIKE</button>
@@ -65,4 +63,20 @@
         </mat-form-field></td>
         </tr></table>
     </form>
+
+
+    <!--Dialog-->
+    <button mat-raised-button (click)="openDialog('3000ms', '5000ms', 'Do you want to add this item to cart')">Open Dialog </button>
+    <button mat-raised-button (click)="openDialog('3000ms', '5000ms', 'Are you sure you want to leave this page')">Open Dialog 2</button>
+
+    <!--Snackbar-->
+    <p>Snackbar</p>
+    <button mat-raised-button (click)="openSnackbar()">Open snackbar</button>
+
+    <!--Badget-->
+    <div class="host">
+        <!-- <button mat-icon-button class="demo-section"> -->
+        <mat-icon class="text-dark fs-3 demo-section" matBadge="15">home</mat-icon>
+        <!-- </button> -->
+    </div>
 </section>
