@@ -10,12 +10,11 @@ export class AuthService {
 
     changeUsername(name:string){
       this.username = name;
-      console.log(this.username);
-      
+      console.log(this.username);      
     }
   constructor(
     private _http: HttpClient
-  ) { }
+  ) {}
 
   url = 'https:jsonplaceholder.typicode.com/users';
   Posturl = 'https://jsonplaceholder.typicode.com/posts'

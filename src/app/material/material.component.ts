@@ -14,10 +14,9 @@ import {MatSnackBar} from '@angular/material/snack-bar'
 import { SnackbarComponent } from '../snackbar/snackbar.component';
 import {MatBadgeModule} from '@angular/material/badge';
 
-
 @Component({
   selector: 'app-material',
-  imports: [MatButtonModule, MatIconModule, MatCardModule, MatChipsModule, MatFormFieldModule, FormsModule, MatInputModule, MatAutocompleteModule, ReactiveFormsModule, MatDialogModule, MatBadgeModule ],
+  imports: [MatButtonModule, MatIconModule, MatCardModule, MatChipsModule, MatFormFieldModule, FormsModule, MatInputModule, MatAutocompleteModule, ReactiveFormsModule, MatDialogModule, MatBadgeModule],
   templateUrl: './material.component.html',
   styleUrl: './material.component.css'
 })
@@ -46,5 +45,4 @@ export class MaterialComponent {
       verticalPosition: 'top', 
     })
   }
-
 }
