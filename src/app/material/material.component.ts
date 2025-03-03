@@ -13,14 +13,16 @@ import { DialogComponent } from '../dialog/dialog.component';
 import {MatSnackBar} from '@angular/material/snack-bar'
 import { SnackbarComponent } from '../snackbar/snackbar.component';
 import {MatBadgeModule} from '@angular/material/badge';
+import {CommonModule} from '@angular/common'; 
 
 @Component({
   selector: 'app-material',
-  imports: [MatButtonModule, MatIconModule, MatCardModule, MatChipsModule, MatFormFieldModule, FormsModule, MatInputModule, MatAutocompleteModule, ReactiveFormsModule, MatDialogModule, MatBadgeModule],
+  imports: [MatButtonModule, MatIconModule, MatCardModule, MatChipsModule, MatFormFieldModule, FormsModule, MatInputModule, MatAutocompleteModule, ReactiveFormsModule, MatDialogModule, MatBadgeModule, CommonModule,],
   templateUrl: './material.component.html',
   styleUrl: './material.component.css'
 })
 export class MaterialComponent {
+  today = new Date; 
   mycontrol = new FormControl('')
   
   dialog = inject(MatDialog)
@@ -44,5 +46,22 @@ export class MaterialComponent {
       horizontalPosition: 'left',
       verticalPosition: 'top', 
     })
+  }
+
+  first_name = '';
+  last_name = '';
+  username = '';
+
+  generate(){
+    this.first_name.slice(0,4)
+    this.last_name.slice(0,4)
+
+    this.username = this.first_name.slice(0,4) + "_" + this.last_name.slice(0,4); 
+  }
+
+  details = {
+    name: 'Lenova',
+    Keyboard_light: true, 
+    processor: 'Window 10 pro 256GHz Intel corei9'
   }
 }

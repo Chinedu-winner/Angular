@@ -28,7 +28,7 @@
     </mat-card>
 
     <!--Forms-->
-    <p>Forms</p>
+    <!-- <p>Forms</p>
 
     <form class="example-form">
         <mat-form-field class="example-full-width">
@@ -62,7 +62,7 @@
             <mat-hint align="end">{{postalCode.value.length}} / 5</mat-hint>
         </mat-form-field></td>9
         </tr></table>
-    </form>
+    </form> -->
 
 
     <!--Dialog-->
@@ -78,5 +78,30 @@
         <!-- <button mat-icon-button class="demo-section"> -->
         <mat-icon class="text-dark fs-3 demo-section" matBadge="15">home</mat-icon>
         <!-- </button> -->
+
+        <!-- pipe -->
+        <p>{{'sqi college of ict'| uppercase}}</p>
+        <p>{{'HELLO'| lowercase}}</p>
+        <p>{{'welcome to lautech'| titlecase}}</p>
+
+        <p>{{'123456789'| currency}}</p>
+        <p>{{'123456789'| currency:'NGN'}}</p>
+        <p>{{'123456789'| currency:'GBP'}}</p>
+        <p>{{'123456789'| currency:'USD'}}</p>
+
+        <p>{{today | date}}</p>
+        <p>{{today | date: 'long'}}</p>
+        <p>{{today | date: 'short'}}</p>
+        <p>{{today | date: 'y-M-d HH:mm:ss'}}</p>
+
+        <input type="text" placeholder="First name" class="form-control"[(ngModel)]="first_name"> 
+        <input type="text" placeholder="Last name" class="form-control" [(ngModel)]="last_name"> 
+        <button mat-button (click)="generate()">Generate username</button>
+        <p>Generated username - {{username}}</p>
+        <p>{{'This text will be sliced'| slice:5:10}}</p>
+        
+        <div>{{details.processor |json}}</div>
+
+        <p>{{0.7658| percent}}</p>
     </div>
 </section>
