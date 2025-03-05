@@ -7,6 +7,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { ProfileComponent } from './profile/profile.component';
 import { UsersComponent } from './users/users.component';
 import { MaterialComponent } from './material/material.component';
+import { PipeComponent } from './pipe/pipe.component';
 
 export const routes: Routes = [
     {path: '', component: HomeComponent, title: 'Home'},
@@ -18,5 +19,6 @@ export const routes: Routes = [
         {path:'profile/:name', component: ProfileComponent, title: 'profile'}
     ]},
     {path: 'material', component:MaterialComponent, title: 'Material'}, 
-    {path: '**', component: PageNotFoundComponent, title: '404 | Page not found'}
+    {path: 'pipe', component: PipeComponent, title: 'Pipes'}, 
+    {path: '**', component: PageNotFoundComponent, title: '404 | Page not found'}, 
 ];
