@@ -1,7 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { PostService } from '../services/post.service';
 import { CommonModule } from '@angular/common';
 import { TruncatePipe } from '../pipes/truncate.pipe';
+import { MatDialog } from '@angular/material/dialog';
+import { DialogComponent } from '../dialog/dialog.component';
 
 @Component({
   selector: 'app-pipe',
@@ -13,6 +15,8 @@ export class PipeComponent {
   constructor(
     private _postService: PostService
   ){}
+
+  dialog = inject(MatDialog) 
 
   posts: any =[];
 
@@ -26,4 +30,17 @@ export class PipeComponent {
       }
     })
   }
+
+  openDialog(enterAnimationDuration:string, exitAnimationDuration: string, message:string):void{[
+    this.dialog.open(DialogComponent, {
+      width: '500px', 
+      enterAnimationDuration,
+      exitAnimationDuration, 
+      data: {
+        dialog_message:message
+      }
+    }
+      
+    )
+  ]}
 }
