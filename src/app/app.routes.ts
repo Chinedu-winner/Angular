@@ -8,6 +8,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { UsersComponent } from './users/users.component';
 import { MaterialComponent } from './material/material.component';
 import { PipeComponent } from './pipe/pipe.component';
+import { ParentComponent } from './parent/parent.component';
 
 export const routes: Routes = [
     {path: '', component: HomeComponent, title: 'Home'},
@@ -18,6 +19,7 @@ export const routes: Routes = [
         {path:'', component: UsersComponent, title: 'user'}, 
         {path:'profile/:name', component: ProfileComponent, title: 'profile'}
     ]},
+    {path: 'parent', component: ParentComponent, title: 'parent'},
     {path: 'material', component:MaterialComponent, title: 'Material'}, 
     {path: 'pipe', component: PipeComponent, title: 'Pipes'}, 
     {path: '**', component: PageNotFoundComponent, title: '404 | Page not found'}, 

@@ -24,7 +24,7 @@ export class PipeComponent {
     this._postService.getPost().subscribe({
       next: (res) =>{
         this.posts = res;        
-      }, 
+      },
       error: (err) =>{
         console.log(err);        
       }
@@ -39,8 +39,7 @@ export class PipeComponent {
       data: {
         dialog_message:message
       }
-    }
-      
+    }      
     )
   ]}
 }

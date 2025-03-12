@@ -17,7 +17,7 @@ import {CommonModule} from '@angular/common';
 
 @Component({
   selector: 'app-material',
-  imports: [MatButtonModule, MatIconModule, MatCardModule, MatChipsModule, MatFormFieldModule, FormsModule, MatInputModule, MatAutocompleteModule, ReactiveFormsModule, MatDialogModule, MatBadgeModule, CommonModule,],
+  imports: [MatButtonModule, MatIconModule, MatCardModule, MatChipsModule, MatFormFieldModule, FormsModule, MatInputModule, MatAutocompleteModule, ReactiveFormsModule, MatDialogModule, MatBadgeModule, CommonModule],
   templateUrl: './material.component.html',
   styleUrl: './material.component.css'
 })
