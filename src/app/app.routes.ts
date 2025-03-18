@@ -9,6 +9,7 @@ import { UsersComponent } from './users/users.component';
 import { MaterialComponent } from './material/material.component';
 import { PipeComponent } from './pipe/pipe.component';
 import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component';
 
 export const routes: Routes = [
     {path: '', component: HomeComponent, title: 'Home'},
@@ -21,6 +22,7 @@ export const routes: Routes = [
     ]},
     {path: 'parent', component: ParentComponent, title: 'parent'},
     {path: 'material', component:MaterialComponent, title: 'Material'}, 
+    {path:'child', component: ChildComponent}, 
     {path: 'pipe', component: PipeComponent, title: 'Pipes'}, 
     {path: '**', component: PageNotFoundComponent, title: '404 | Page not found'}, 
 ];

@@ -1,6 +1,11 @@
-<p  class="fw-bold fs-4">Add Product</p>
-<div class="col-6 px-2 shadow mx-auto px-2 py-1">
+<!-- <div class="col-6 mt-5 px-2 shadow mx-auto px-2 py-1">
+    <p  class="fw-bold text-center text-info fs-4">Add Product</p>
     <input type="text" class="form-control mb-2" placeholder="Input" [(ngModel)]="item">
     <button class="btn btn-md w-100 bg-danger text-light" (click)="addTocart()">Add to cart</button>
-    <app-child [msg]="message" [mycart]="cart"></app-child>
+    <app-child [msg]="message" [mycart]="cart" class="text-center"> </app-child>
+</div> --> 
+<a [routerLink]="['/child']" routerLinkActive="router-link-active" >Go to your child </a>
+<div>
+    <p>{{username}}</p>
+    <button class="btn  btn-md" (click)="changeUser()">Change User </button>
 </div>
